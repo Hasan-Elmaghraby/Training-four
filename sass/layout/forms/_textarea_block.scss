@@ -1,0 +1,11 @@
+.custom-textarea {
+  height: 144px;
+  resize: none;
+  width: 100%;
+  border: 1px solid $borderBreakColor;
+  border-radius: $secondaryBorderRadius;
+  padding: 20px 15px;
+  &:focus {
+    outline: 0;
+  }
+}

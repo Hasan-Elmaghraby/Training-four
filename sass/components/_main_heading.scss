@@ -1,0 +1,67 @@
+//component for custom padding and margin
+.custom-section {
+  padding-top: $padding-sction;
+  margin-bottom: $margin-section;
+}
+@include widthScreen(large) {
+  .custom-section {
+    padding-top: calc($padding-sction/2);
+    margin-bottom: calc($margin-section/2);
+  }
+}
+@include widthScreen(mobile) {
+  .custom-section {
+    padding-top: calc($padding-sction/4);
+    margin-bottom: calc($margin-section/5);
+  }
+}
+
+.site-heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  @include widthScreen(medium) {
+    flex-direction: column;
+  }
+  .site-heading {
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
+}
+
+.site-heading {
+  margin-bottom: $smallMargin;
+  padding-bottom: 10px;
+  @include widthScreen(medium) {
+    text-align: center;
+  }
+  .title {
+    font-size: $titleFont;
+    font-weight: $titlefontWeight;
+    color: $primaryColor;
+
+    @include widthScreen(medium) {
+      font-size: 25px;
+    }
+  }
+  .subtitle {
+    font-size: $subtitleFont;
+    color: $subtitleColor;
+    font-weight: $subtitlefontWeight;
+  }
+}
+
+.arrow-sec {
+  display: flex;
+  align-items: center;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    transform: unset;
+    margin: 0;
+    position: static;
+    margin-inline-start: 10px;
+    flex-shrink: 0;
+  }
+}

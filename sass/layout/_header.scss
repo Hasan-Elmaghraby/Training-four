@@ -1,0 +1,55 @@
+@import "header/dropdown";
+@import "header/login_buttons";
+@import "header/logo";
+@import "header/navbar";
+@import "header/toolbar_options";
+.fixed-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 20px;
+
+  &.active_menu__,
+  &.not_active_menu__ {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 111;
+    transition: 0s;
+    background-color: $primaryColor;
+    z-index: 111;
+    padding: 12.5px 30px;
+    box-shadow: 0 0 7px rgba(#000, 0.06);
+  }
+
+  &.active_menu__ {
+    animation: active-menu 0.5s;
+  }
+
+  &.not_active_menu__ {
+    animation: not-active-menu 0.5s;
+    top: -200px;
+  }
+}
+
+@keyframes active-menu {
+  0% {
+    top: -200px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes not-active-menu {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -200px;
+  }
+}

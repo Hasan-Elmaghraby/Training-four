@@ -1,0 +1,68 @@
+.custom-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+  outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+
+  .custom-icon {
+    margin-inline-end: 10px;
+  }
+
+  &.modify-button {
+    border-radius: 5px;
+    border: 1px solid $secondaryColor;
+    color: $secondaryColor;
+    height: 32px;
+    min-width: 87px;
+
+    &:hover {
+      background-color: rgba($secondaryColor, 0.1);
+    }
+  }
+
+  &.delete-button {
+    border-radius: 5px;
+    border: 1px solid $redColor;
+    color: $redColor;
+    height: 32px;
+    min-width: 87px;
+
+    &:hover {
+      background-color: rgba($redColor, 0.1);
+    }
+  }
+}
+
+.buttons-group {
+  &.flex-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.group-gap {
+      gap: 15px;
+    }
+
+    &.none-margin {
+      margin: 0;
+    }
+  }
+}
+
+.contacts-buttons-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #d9e0e5;
+  padding: 16px;
+
+  @include widthScreen(medium) {
+    flex-direction: column;
+  }
+}

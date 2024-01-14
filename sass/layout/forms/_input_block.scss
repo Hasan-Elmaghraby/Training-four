@@ -1,0 +1,24 @@
+.custom-input {
+  height: 52px;
+  border: solid 1px $borderColor;
+  background-color: $bgColorInputs;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: $headingMainColor;
+  padding: 20px 29px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: $secondaryBorderRadius;
+
+  &:focus,
+  &:hover {
+    border-color: $primaryColor;
+  }
+
+  &::placeholder {
+    color: $palceholderColor;
+  }
+}

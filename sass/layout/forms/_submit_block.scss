@@ -1,0 +1,163 @@
+.submit-button {
+  color: #fff;
+  background: $primaryColor;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.5s;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  padding: 0 30px;
+  height: 56px;
+  width: 100%;
+  border-radius: $secondaryBorderRadius;
+  min-width: 180px;
+
+  .icon__ {
+    flex-shrink: 0;
+    margin-inline-start: 5px;
+    transition: $mainTransition;
+  }
+
+  &:hover {
+    background-color: rgba($primaryColor, 0.9);
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &.full_width__ {
+    width: 100%;
+  }
+
+  &.fixed_size__ {
+    min-width: 140px;
+  }
+
+  &.full_width_sm__ {
+    @include widthScreen(medium) {
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &.secondaryColorButton {
+    background-color: $secondaryColor;
+
+    &:hover {
+      background-color: rgba($secondaryColor, 0.9);
+    }
+  }
+
+  &.cancellation_button {
+    background-color: #fff;
+    color: $headingSecondaryColor;
+    border: 1px solid $borderColor;
+
+    &:hover {
+      background-color: rgba($headingSecondaryColor, 0.05);
+    }
+  }
+
+  &.like_button__ {
+    min-width: 100px;
+    height: 40px;
+    background-color: #ecfddc;
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+
+    @include widthScreen(medium) {
+      min-width: 192.6px;
+    }
+
+    .icon__ {
+      margin: 0;
+      margin-inline-end: 5px;
+    }
+
+    &:hover {
+      background-color: rgba($primaryColor, $alpha: 0.09);
+      // color: #fff;
+
+      // .icon__ {
+      //   filter: brightness(0) invert(1);
+      // }
+    }
+  }
+
+  &.modify_button__ {
+    border-radius: 5px;
+    border: 1px solid $secondaryColor;
+    color: $secondaryColor;
+    height: 32px;
+    min-width: 87px;
+
+    &:hover {
+      background-color: rgba($secondaryColor, 0.1);
+    }
+  }
+
+  &.delete_button__ {
+    border-radius: 5px;
+    border: 1px solid $redColor;
+    color: $redColor;
+    height: 32px;
+    min-width: 87px;
+
+    &:hover {
+      background-color: rgba($redColor, 0.1);
+    }
+  }
+
+  &.call_button {
+    font-size: 12px;
+    min-width: 95px;
+    height: 40px;
+    background-color: #e6f9fa;
+    border-radius: 5px;
+    border: 1px solid $secondaryColor;
+    color: $secondaryColor;
+    cursor: pointer;
+
+    .phone_icon {
+      margin-inline-end: 11px;
+      fill: $secondaryColor;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #22b1bf;
+
+      .phone_icon {
+        fill: #fff;
+      }
+
+      .phone_icon {
+        fill: #fff;
+      }
+    }
+  }
+
+  &.send_button {
+    border: 0;
+    background-color: $primaryColor;
+    padding: 10px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.9);
+    }
+  }
+}
