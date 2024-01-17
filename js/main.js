@@ -116,3 +116,9 @@ function stickyHeader($) {
 }
 
 // End Fixed Header
+
+$(".page-services .service-block").each(function () {
+  $(this).on("click", function () {
+    $(this).find($(".page-services  .more-info")).slideToggle(500);
+  });
+});

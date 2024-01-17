@@ -65,3 +65,29 @@
     flex-shrink: 0;
   }
 }
+.site-heading-wrapper {
+  &.with-figure {
+    .site-heading {
+      display: flex;
+      gap: 10px;
+      & figure {
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 120px;
+          height: 120px;
+          background-color: #f9e9f3;
+          top: 0px;
+          left: 40px;
+          border-radius: 50%;
+          z-index: -1;
+        }
+      }
+      & .title {
+        width: 50%;
+        color: $innerTextColor;
+      }
+    }
+  }
+}

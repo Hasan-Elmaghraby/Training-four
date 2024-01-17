@@ -1,0 +1,43 @@
+.about-us-info-img {
+  .info {
+    p {
+      font-size: 18px;
+      color: #606060;
+    }
+  }
+}
+.about-us-appendix {
+  margin-top: 50px;
+}
+.block-appendix-info {
+  border: 5px solid #f2edf5;
+  border-radius: $secondaryBorderRadius;
+  position: relative;
+  padding: 80px 20px 20px 20px;
+  @include widthScreen(medium) {
+    margin-bottom: 80px;
+  }
+  @include widthScreen(mobile) {
+    margin-bottom: 45px;
+    padding: 60px 20px 20px 20px;
+  }
+  & figure {
+    position: absolute;
+    top: -22%;
+    right: -1%;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    padding: 25px;
+    border: 4px solid #f2edf5;
+    @include widthScreen(mobile) {
+      top: -8%;
+      width: 80px;
+      height: 80px;
+      padding: 14px;
+    }
+  }
+}
