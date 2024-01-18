@@ -37,6 +37,8 @@ function typeWriter() {
 }
 typeWriter();
 // End Effect Writing
+
+// Start Home Swiper
 var swiper = new Swiper(".swiper-company-partners", {
   navigation: {
     nextEl: ".swiper-button-next",
@@ -78,6 +80,7 @@ var swiper = new Swiper(".swiper-company-partners", {
     delay: 1000,
   },
 });
+// End Home Swiper
 
 // Start Fixed Header
 function stickyHeader($) {
@@ -114,11 +117,48 @@ function stickyHeader($) {
     lastScroll = currentScroll;
   });
 }
-
 // End Fixed Header
 
+// Start Toggle link in Page Services
 $(".page-services .service-block").each(function () {
   $(this).on("click", function () {
     $(this).find($(".page-services  .more-info")).slideToggle(500);
   });
 });
+// End Toggle link in Page Services
+
+// Start Swiper in Page Mobile Services
+var swiper = new Swiper(".feature-swiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
+  autoplay: {
+    delay: 1000,
+  },
+});
+// End Swiper in Page Mobile Services

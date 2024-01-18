@@ -16,6 +16,16 @@
 }
 // Start programming web
 .programming-web-info {
+  @include widthScreen(mobile) {
+    & .site-heading-wrapper.with-figure {
+      margin-right: 10px;
+      & .site-heading {
+        & figure::before {
+          left: 10px;
+        }
+      }
+    }
+  }
   p {
     font-size: 18px;
     color: #606060;
@@ -56,5 +66,103 @@
     }
   }
 }
-
 // end programming web
+//Stat Programming Mobile
+.programming-mobile-info {
+  & .site-heading-wrapper.with-figure {
+    & .site-heading {
+      & figure::before {
+        left: 0px;
+      }
+    }
+  }
+}
+.block-modal {
+  background-color: #f8f6fa;
+  padding: 50px 30px 50px 30px;
+  border-radius: $secondaryBorderRadius;
+  text-align: center;
+  position: relative;
+  margin: 20px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 10px;
+    background-color: #ece5f0;
+    border-radius: $secondaryBorderRadius;
+    left: 13%;
+    top: 0;
+  }
+  .title {
+    font-size: $subtitleFont;
+    color: $innerTextColor;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 35px;
+    color: #606060;
+    line-height: 1.9;
+  }
+  & .button-link {
+    padding: 12px 43px;
+    background-color: #fff;
+    color: $primaryColor;
+    &:hover {
+      background-color: $primaryColor;
+      color: #fff;
+    }
+  }
+}
+.block-feature {
+  min-height: 325px;
+  text-align: center;
+  position: relative;
+  padding: 90px 20px 30px 20px;
+  @include widthScreen(mobile) {
+    min-height: 225px;
+    padding: 60px 10px 20px 10px;
+  }
+  border: 5px solid #f2edf5;
+  border-radius: $secondaryBorderRadius;
+  & figure {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 5px solid #f2edf5;
+    padding: 33px;
+    @include widthScreen(mobile) {
+      padding: 20px;
+    }
+    border-radius: 50%;
+    & img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+    }
+  }
+  .title {
+    font-size: $subtitleFont;
+    color: $innerTextColor;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 35px;
+    color: #606060;
+    line-height: 1.9;
+  }
+}
+.feature-swiper {
+  &.general-swiper {
+    margin-top: -125px !important;
+    .arrow-swiper {
+      top: -165px;
+      @include widthScreen(medium) {
+        top: -100px;
+      }
+    }
+  }
+}
+//End Programming Mobile

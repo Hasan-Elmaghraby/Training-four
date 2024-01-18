@@ -348,24 +348,6 @@
 }
 // End Home Blog
 // Start Home  company Partners
-.buttons-direction {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  & button {
-    padding: 0px 18px;
-    outline: none;
-    border: none;
-    border-radius: 12px;
-    color: $primaryColor;
-    background-color: #f0edf3;
-    transition: $mainTransition;
-    &:hover {
-      background-color: $primaryColor;
-      color: #fff;
-    }
-  }
-}
 .partners-block {
   .figure-effect {
     & img {
@@ -380,12 +362,30 @@
     }
   }
 }
-.swiper-company-partners {
-  & .swiper-wrapper {
-    flex-direction: row !important;
-  }
-  .swiper-slide {
-    height: calc((100%) / 2) !important;
+.general-swiper {
+  padding-top: 200px !important;
+  margin-top: -200px !important;
+  .arrow-swiper {
+    position: relative;
+    top: -80px;
+    left: -90%;
+    @include widthScreen(medium) {
+      top: 5px;
+      left: -50%;
+    }
+    .swiper-button-prev {
+      position: absolute !important;
+      right: 0% !important;
+      top: 0 !important;
+      margin-right: -40px;
+    }
+    .swiper-button-next {
+      position: absolute !important;
+      right: 0 !important;
+      top: 0;
+      cursor: pointer;
+      margin-right: 35px;
+    }
   }
   .swiper-button-next,
   .swiper-button-prev {
@@ -408,18 +408,13 @@
       }
     }
   }
-  .swiper-button-prev {
-    position: relative !important;
-    right: 39% !important;
-    top: -22px !important;
+}
+.swiper-company-partners {
+  & .swiper-wrapper {
+    flex-direction: row !important;
   }
-  .swiper-button-next {
-    position: relative !important;
-    left: -50% !important;
-    @include widthScreen(mobile) {
-      left: -60% !important;
-    }
-    top: -2px !important;
+  .swiper-slide {
+    height: calc((100%) / 2) !important;
   }
 }
 // End Home  company Partners

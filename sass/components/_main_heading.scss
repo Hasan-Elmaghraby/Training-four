@@ -72,6 +72,13 @@
       gap: 10px;
       & figure {
         position: relative;
+        @include widthScreen(mobile) {
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+
         &::before {
           position: absolute;
           content: "";
@@ -82,6 +89,10 @@
           left: 40px;
           border-radius: 50%;
           z-index: -1;
+          @include widthScreen(mobile) {
+            width: 75px;
+            height: 75px;
+          }
         }
       }
       & .title {
