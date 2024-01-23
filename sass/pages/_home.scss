@@ -409,7 +409,11 @@
     }
   }
 }
-.swiper-company-partners {
+.swiper-grid-2 {
+  .swiper-slide {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
   & .swiper-wrapper {
     flex-direction: row !important;
   }

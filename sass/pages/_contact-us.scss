@@ -1,0 +1,93 @@
+.contact-us-page {
+  position: relative;
+  & .section-shape {
+    background-color: #fcfcfc7a;
+    top: -9%;
+    right: -5%;
+  }
+}
+.block-contact {
+  display: flex;
+  align-items: center;
+  @include widthScreen(medium) {
+    justify-content: center;
+  }
+  .block-info {
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: center;
+    h5 {
+      color: #35253e;
+    }
+    span {
+      color: #581b81;
+    }
+  }
+  figure {
+    position: relative;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: #5d317b;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 40px;
+    color: #fff;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      bottom: -7.5px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #5d317b;
+    }
+  }
+  &.whatsapp {
+    figure {
+      background-color: $whatsappColor;
+      &::after {
+        background-color: $whatsappColor;
+      }
+    }
+
+    .block-info {
+      span {
+        color: $whatsappColor;
+      }
+    }
+  }
+  &.message {
+    figure {
+      background-color: #35253e;
+      &::after {
+        background-color: #35253e;
+      }
+    }
+
+    .block-info {
+      span {
+        color: #35253e;
+      }
+    }
+  }
+}
+.title-map {
+  font-size: 20px;
+  color: #35253e;
+  span {
+    color: #581b81;
+  }
+}
+iframe {
+  width: 100%;
+  max-width: 100%;
+}

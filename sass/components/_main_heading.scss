@@ -65,6 +65,7 @@
     flex-shrink: 0;
   }
 }
+// Site Heading with figure
 .site-heading-wrapper {
   &.with-figure {
     .site-heading {
@@ -98,6 +99,19 @@
       & .title {
         width: 50%;
         color: $innerTextColor;
+      }
+    }
+  }
+}
+// Site Heading with date-info
+.site-heading-wrapper {
+  &.info {
+    .site-heading {
+      .date-info {
+        span {
+          color: #a8a8a8;
+          font-size: 20px;
+        }
       }
     }
   }

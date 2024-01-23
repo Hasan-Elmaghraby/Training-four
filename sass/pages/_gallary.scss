@@ -1,0 +1,97 @@
+.gallary-page {
+  & .gallary-buttons {
+    justify-content: start;
+    @include widthScreen(medium) {
+      justify-content: center;
+    }
+  }
+}
+.gallary-swiper {
+  &.general-swiper {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    padding-bottom: 50px !important;
+    margin-bottom: 50px !important;
+    & .arrow-swiper {
+      top: 30px;
+      left: -48%;
+      .swiper-button-next {
+        margin-right: 105px;
+      }
+      .swiper-button-prev {
+        margin-right: -85px;
+      }
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #beb5c7;
+    font-weight: bolder;
+    opacity: 1;
+    background-color: transparent;
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: $primaryColor;
+  }
+}
+
+// Start Estudy Page
+.estudy-info {
+  .button-link {
+    figure {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 28px;
+        height: 28px;
+        border: 1px solid;
+        border-radius: 50%;
+        top: 1px;
+        left: -40%;
+        @include widthScreen(mobile) {
+          width: 25px;
+          height: 25px;
+          top: -2px;
+          left: -30%;
+        }
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 50%;
+        bottom: 0px;
+        right: -5px;
+        @include widthScreen(mobile) {
+          width: 4px;
+          height: 4px;
+          bottom: -1px;
+          right: -3px;
+        }
+      }
+    }
+  }
+  p {
+    font-size: 18px;
+    color: #606060;
+  }
+}
+.estudy-img {
+  figure {
+    text-align: center;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+// End Estudy Page

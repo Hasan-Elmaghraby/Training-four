@@ -18,12 +18,6 @@
 // components
 @import "components/main_site_link";
 @import "components/main_heading";
-@import "components/pagination";
-@import "components/sector_block";
-@import "components/deal_block";
-@import "components/sector_divisions_block";
-@import "components/search_form";
-@import "components/message_block";
 
 // layout
 @import "layout/header";
@@ -35,3 +29,6 @@
 @import "pages/home";
 @import "pages/about-us";
 @import "pages/services";
+@import "pages/gallary";
+@import "pages/blog-details";
+@import "pages/contact-us";

@@ -39,7 +39,7 @@ typeWriter();
 // End Effect Writing
 
 // Start Home Swiper
-var swiper = new Swiper(".swiper-company-partners", {
+var swiper = new Swiper(".swiper-grid-2", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -52,6 +52,9 @@ var swiper = new Swiper(".swiper-company-partners", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
   },
   breakpoints: {
     320: {
@@ -100,11 +103,10 @@ function stickyHeader($) {
       $(".main-header").css("height", fixedHeaderElementHeight);
     };
 
-    fixedHeightToHeaderWrapper(fixedHeaderElement);
+    // fixedHeightToHeaderWrapper(fixedHeaderElement);
 
     if (isScrollingDown()) {
       fixedHeaderElement
-
         .addClass("active_menu__")
         .removeClass("not_active_menu__");
     } else if (isScrollingUp()) {
